@@ -4,7 +4,7 @@ import React from 'react';
 const App = () => {
   return (
     <SafeAreaView>
-      <Text style={{fontSize: 24, textAlign: 'center'}}>Rn UI components</Text>
+      <Text style={{fontSize: 24, textAlign: 'center'}}>UI Components</Text>
     </SafeAreaView>
   );
 };
