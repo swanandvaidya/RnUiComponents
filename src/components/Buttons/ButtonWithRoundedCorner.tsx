@@ -12,14 +12,14 @@ const ButtonWithRoundedCorner = () => {
 const btnStyle = StyleSheet.create({
   roundedCorner: {
     backgroundColor: 'hotpink',
-    padding: 14,
-    marginHorizontal: 20,
+    padding: 10,
     borderRadius: 10,
     alignItems: 'center',
+    marginVertical: 20,
   },
   btnText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
   },
 });
 
