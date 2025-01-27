@@ -3,6 +3,8 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import StandardButtonComponent from '../components/Buttons/StandardButtonComponent';
 import ButtonWithRoundedCorner from '../components/Buttons/ButtonWithRoundedCorner';
+import ButtonWithGradient from '../components/Buttons/ButtonWithGradient';
+import ButtonWithGradientBorder from '../components/Buttons/ButtonWithGradientBorder';
 
 const ButtonComponentsScreen = () => {
   return (
@@ -10,6 +12,8 @@ const ButtonComponentsScreen = () => {
       <Text style={styles.header}>ButtonComponentsScreen</Text>
       <StandardButtonComponent />
       <ButtonWithRoundedCorner />
+      <ButtonWithGradient />
+      <ButtonWithGradientBorder />
     </View>
   );
 };
@@ -23,6 +27,6 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 18,
-    marginVertical: 12,
+    marginVertical: 16,
   },
 });

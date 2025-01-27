@@ -15,59 +15,12 @@ import HomeScreen from './src/screens/HomeScreen';
 import TextComponentsScreen from './src/screens/TextComponentsScreen';
 import ButtonComponentsScreen from './src/screens/ButtonComponentsScreen';
 import ListComponentScreen from './src/screens/ListComponentScreen';
+import AppNavigation from './src/navigation/AppNavigation';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const getDefaultScreenOptions = navigation => ({
-    headerLeft:
-      Platform.OS === 'ios' ? (
-        <Button title="Back" onPress={() => navigation.goBack()} />
-      ) : null,
-  });
-
-  const customHeader = () => {
-    return (
-      <View style={styles.customHeader}>
-        <Text style={styles.headerTitle}>Custom Header</Text>
-      </View>
-    );
-  };
-
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: 'snow',
-          },
-        }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="TextComponents" component={TextComponentsScreen} />
-        <Stack.Screen
-          name="ButtonComponentsScreen"
-          component={ButtonComponentsScreen}
-        />
-        <Stack.Screen
-          name="ListComponentScreen"
-          component={ListComponentScreen}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <AppNavigation />;
 };
-
-const styles = StyleSheet.create({
-  customHeader: {
-    height: 60, // Set custom header height
-    backgroundColor: 'skyblue',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  headerTitle: {
-    fontSize: 20,
-    color: 'white',
-  },
-});
 
 export default App;
